@@ -11,7 +11,7 @@ private:
     std::vector<Visa> visa;
 public:
     ForeignPassport();
-    ForeignPassport(int serial, int number, std::string name, std::string surname, Date birthday,
+    ForeignPassport(std::string name, std::string surname, Date birthday,
         std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName,
         std::vector<Visa> visa);
 

@@ -1,5 +1,8 @@
 #include "Passport.h"
 
+int Passport::serial = 0;
+int Passport::number = 100000;
+
 Passport::Passport()
 {
     serial = 0;
@@ -14,11 +17,9 @@ Passport::Passport()
     residenseRegistr = "undefined";
 }
 
-Passport::Passport(int serial, int number, std::string name, std::string surname, Date birthday, std::string wereBornPlace, Date dateGivedPasport, 
+Passport::Passport(std::string name, std::string surname, Date birthday, std::string wereBornPlace, Date dateGivedPasport, 
     std::string gavePasportName, std::string nameByFather, std::string residenseRegistr)
 {
-    this->serial = counter;
-    this->number = counterNumber;
     this->name = name;
     this->surname = surname;
     this->birthday = birthday;
@@ -27,8 +28,20 @@ Passport::Passport(int serial, int number, std::string name, std::string surname
     this->gavePasportName = gavePasportName;
     this->nameByFather = nameByFather;
     this->residenseRegistr = residenseRegistr;
-    counter++;
-    counterNumber++;
+    this->serial++;
+    this->number++;
+}
+
+Passport::Passport(std::string name, std::string surname, Date birthday, std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName)
+{
+    this->name = name;
+    this->surname = surname;
+    this->birthday = birthday;
+    this->wereBornPlace = wereBornPlace;
+    this->dateGivedPasport = dateGivedPasport;
+    this->gavePasportName = gavePasportName;
+    this->serial++;
+    this->number++;
 }
 
 Passport::~Passport()
@@ -88,13 +101,13 @@ std::string Passport::getResidenseRegistr() const
 
 void Passport::showInfo() const
 {
-    std::cout << "\nSurname\t\t" << getSurname() <<
-        "\nName\t\t" << getName() <<
-        "\nPatronymic\t" << getNameByFather() <<
-        "\nNationality\t" << getWereBornPlace() <<
-        "\nDate of birth\t" << getBirthday() <<
+    std::cout << "\nSurname\t\t\t" << getSurname() <<
+        "\nName\t\t\t" << getName() <<
+        "\nPatronymic\t\t" << getNameByFather() <<
+        "\nNationality\t\t" << getWereBornPlace() <<
+        "\nDate of birth\t\t" << getBirthday() <<
         "\nResidense registration\t" << getResidenseRegistr() <<
         "\nPasport was given by\t" << getGavePasportName() <<
-        "\nserial\t\t" << getSerial() <<
-        "\nnumber\t\t" << getNumber() << "\n";
+        "\nserial\t\t\t" << getSerial() <<
+        "\nnumber\t\t\t" << getNumber() << "\n";
 }

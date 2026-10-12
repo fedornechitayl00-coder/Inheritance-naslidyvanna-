@@ -6,8 +6,8 @@ ForeignPassport::ForeignPassport()
 	visa = { };
 }
 
-ForeignPassport::ForeignPassport(int serial, int number, std::string name, std::string surname, Date birthday, std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName, std::vector<Visa> visa) 
-	:Passport(serial, number, name, surname, birthday, wereBornPlace, dateGivedPasport, gavePasportName)
+ForeignPassport::ForeignPassport(std::string name, std::string surname, Date birthday, std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName, std::vector<Visa> visa) 
+	:Passport(name, surname, birthday, wereBornPlace, dateGivedPasport, gavePasportName)
 {
 	this->visa = visa;
 }

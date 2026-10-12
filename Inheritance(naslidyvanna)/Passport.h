@@ -6,10 +6,8 @@
 class Passport
 {
 protected:
-	static int counter;
-	static int counterNumber;
-	int serial;
-	int number;
+	static int serial;
+	static int number;
 	std::string name;
 	std::string surname;
 	Date birthday;
@@ -21,10 +19,10 @@ private:
 	std::string residenseRegistr;
 public:
 	Passport();
-	Passport(int serial, int number, std::string name, std::string surname, Date birthday,
+	Passport(std::string name, std::string surname, Date birthday,
 		std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName,
 		std::string nameByFather, std::string residenseRegistr);
-	Passport(int serial, int number, std::string name, std::string surname, Date birthday,
+	Passport(std::string name, std::string surname, Date birthday,
 		std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName);
 	~Passport();
 

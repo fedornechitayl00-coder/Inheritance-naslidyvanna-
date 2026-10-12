@@ -7,17 +7,16 @@
 #include "ForeignPassport.h"
 #include "Visa.h"
 
-int counter = 0;
-int counterNumber = 0;
+
 
 int main()
 {
-	Passport ukrainian(counter, counterNumber, "Kamilla", "Fedorova", Date(28, 9, 2009), "Kharkiv", Date(8, 1, 2024), "Henna", "Mihaylivna", "Amosova 1");
+	Passport ukrainian("Kamilla", "Fedorova", Date(28, 9, 2009), "Ukraine", Date(8, 1, 2024), "Henna", "Mihaylivna", "Amosova 1");
 	
+	ukrainian.showInfo();
 	
-	
-	
-	
+	ForeignPassport ukrainToCanada();
+
 	//Lesson english;
 	//Lesson programming("C++", "Inheritance", "create basic class");
 
