@@ -33,5 +33,5 @@ void Visa::showInfo() const
 {
     std::cout << "\n\tVISA TO " << getCountryName() <<
         "\nDate of opening visa\t" << getDateOfOpeningVisa() <<
-        "\nExpiring date\t" << getDateOfClosingVisa() << "\n";
+        "\nExpiring date\t\t" << getDateOfClosingVisa() << "\n";
 }

@@ -13,7 +13,9 @@ public:
     ForeignPassport();
     ForeignPassport(std::string name, std::string surname, Date birthday,
         std::string wereBornPlace, Date dateGivedPasport, std::string gavePasportName,
-        std::vector<Visa> visa);
+        std::vector<Visa>& visa);
+
+    void addVisa(const Visa& newVisa);
 
     void showInfo() const;
 };

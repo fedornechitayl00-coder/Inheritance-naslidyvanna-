@@ -8,14 +8,19 @@
 #include "Visa.h"
 
 
-
 int main()
 {
-	Passport ukrainian("Kamilla", "Fedorova", Date(28, 9, 2009), "Ukraine", Date(8, 1, 2024), "Henna", "Mihaylivna", "Amosova 1");
+	Passport ukrainian("Kamilla", "Fedorova", Date(28, 9, 2009), "Ukraine", Date(8, 1, 2024), "Authority 2881", "Mihaylivna", "Amosova 1");
 	
 	ukrainian.showInfo();
 	
-	ForeignPassport ukrainToCanada();
+	std::vector<Visa> visas;
+	visas.push_back(Visa("Canada", Date(12, 9, 2023), Date(12, 9, 2027)));
+	visas.push_back(Visa("Japan", Date(7, 12, 2025), Date(7, 12, 2029)));
+
+	ForeignPassport ukrainianForeignPassp("Kamilla", "Fedorova", Date(28, 9, 2009), "Kharkiv", Date(8, 1, 2024), "Authority 8890", visas);
+	
+	ukrainianForeignPassp.showInfo();
 
 	//Lesson english;
 	//Lesson programming("C++", "Inheritance", "create basic class");
